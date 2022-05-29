@@ -52,7 +52,7 @@ export default class Document extends NextDocument {
           />
           <meta
             name="twitter:image"
-            content="https://pbs.twimg.com/profile_banners/334939077/1653788154/1500x500"
+            content="https://i.pinimg.com/originals/64/42/0b/64420b6687531dcde9499f0332b1c7a2.jpg"
           />
         </Head>
         <body>
