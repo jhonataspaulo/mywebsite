@@ -33,6 +33,12 @@ export default class Document extends NextDocument {
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
+          <meta
+            name="description"
+            content="Faça seu site hoje mesmo, com as melhores tecnologias dos mercado, sistemas de controle para sua loja, aplicativos para seu trabaho, e muito mais..."
+          />
+          <meta name="keywords" content="site, desenvolvimento, jhonatas" />
+          <meta name="author" content="Jhonatas Paulo" />
         </Head>
         <body>
           <Main />
