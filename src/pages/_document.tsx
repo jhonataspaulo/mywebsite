@@ -41,17 +41,14 @@ export default class Document extends NextDocument {
           <meta name="author" content="Jhonatas Paulo" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@JhonatasPaulo" />
-          <meta
-            name="twitter:title"
-            content="Jhonatas Paulo, Developer"
-          />
+          <meta name="twitter:title" content="Jhonatas Paulo, Developer" />
           <meta
             name="twitter:description"
             content="I work with UI Designer, Frontend and Backend"
           />
           <meta
             name="twitter:image"
-            content=""
+            content="https://pbs.twimg.com/profile_banners/334939077/1647481609/1500x500"
           />
         </Head>
         <body>
