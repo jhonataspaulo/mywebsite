@@ -50,7 +50,7 @@ export function Header() {
                 <a href="#skills">Habilidades</a>
               </Anchor>
               <Anchor>
-                <a href="#contact">Contact</a>
+                <a href="#contact">Contato</a>
               </Anchor>
             </Links>
             <ToogleMenuMobile onClick={() => setMenu(true)}>

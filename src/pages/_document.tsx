@@ -44,11 +44,11 @@ export default class Document extends NextDocument {
           <meta name="twitter:site" content="@JhonatasPaulo" />
           <meta
             name="twitter:title"
-            content="Jhonatas Paulo | Fullstack Development"
+            content="Jhonatas Paulo | Fullstack Developer"
           />
           <meta
             name="twitter:description"
-            content="UI Designer and Fullstack Development"
+            content="UI Designer and Fullstack Developer"
           />
           <meta
             name="twitter:image"
