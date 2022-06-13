@@ -23,8 +23,8 @@ export function Header() {
   const [menu, setMenu] = useState(false);
 
   return (
-    <Container>
-      <ContainerHeader id="home">
+    <Container id="home">
+      <ContainerHeader>
         <Navigation>
           <svg
             width="69"

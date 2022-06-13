@@ -14,8 +14,8 @@ import {
 
 export function Skills() {
   return (
-    <Container>
-      <ContainerAbout id="skills">
+    <Container id="skills">
+      <ContainerAbout className="reveal">
         <HeaderAbout>
           <Header>
             <Title>Habilidades</Title>

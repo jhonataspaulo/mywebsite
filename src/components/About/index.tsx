@@ -10,8 +10,8 @@ import {
 
 export function About() {
   return (
-    <Container>
-      <ContainerAbout id="about">
+    <Container id="about">
+      <ContainerAbout className="reveal">
         <HeaderAbout>
           <Header>
             <Title>Quem Sou</Title>

@@ -14,8 +14,8 @@ import {
 
 export function Contact() {
   return (
-    <Container>
-      <ContainerAbout id="contact">
+    <Container id="contact">
+      <ContainerAbout className="reveal">
         <HeaderAbout>
           <Header>
             <Title>Contato</Title>

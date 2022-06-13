@@ -6,7 +6,17 @@ export const Container = styled('div', {
 export const ContainerAbout = styled('div', {
   maxWidth: 'min(1000px, 90%)',
   margin: '0 auto',
-  padding: '10rem 0 10rem 0'
+  padding: '10rem 0 10rem 0',
+
+  position: 'relative',
+  transform: 'translateY(150px)',
+  opacity: 0,
+  transition: '1s all ease',
+
+  '&.active': {
+    transform: 'translateY(0)',
+    opacity: 1
+  }
 });
 
 export const HeaderAbout = styled('div', {

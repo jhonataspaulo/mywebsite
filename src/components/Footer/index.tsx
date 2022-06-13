@@ -9,8 +9,8 @@ import {
 
 export function Footer() {
   return (
-    <Container>
-      <ContainerAbout id="footer">
+    <Container id="footer">
+      <ContainerAbout>
         <svg
           width="69"
           height="30"

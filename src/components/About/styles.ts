@@ -6,10 +6,19 @@ export const Container = styled('div', {
 export const ContainerAbout = styled('div', {
   maxWidth: 'min(1000px, 90%)',
   margin: '0 auto',
-  padding: '5rem 0 0 0'
+  padding: '5rem 0 0 0',
   // '& svg': {
   //   filter: 'brightness(.4)'
   // }
+  position: 'relative',
+  transform: 'translateY(150px)',
+  opacity: 0,
+  transition: '1s all ease',
+
+  '&.active': {
+    transform: 'translateY(0)',
+    opacity: 1
+  }
 });
 
 export const HeaderAbout = styled('div', {
