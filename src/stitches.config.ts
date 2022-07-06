@@ -12,28 +12,17 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      text: 'black',
-      background: 'white',
-      primary: '#3d3d3d',
-      background1: '#c2c2c2',
-      background2: '#f2f2f2'
+      text: '#f2f2f2',
+      background: '#0C0C0C',
+      primary: '#56FF9A',
+      orange: '#F6B100',
+      blue: '#00AAE0'
     }
   },
   media: {
-    bp1: '(min-width: 640px)',
-    bp2: '(min-width: 768px)',
-    bp3: '(min-width: 1024px)'
+    bp0: '(max-width: 300px)',
+    bp1: '(max-width: 640px)',
+    bp2: '(max-width: 768px)',
+    bp3: '(max-width: 1024px)'
   }
-});
-
-export const dark = createTheme({
-  colors: {
-    text: 'white',
-    background: 'black',
-    primary: 'hsla(144, 100%, 67%, 1)',
-    background1: 'hsla(249, 35%, 7%, 1)',
-    background2: 'hsla(249, 24%, 11%, 1)'
-  },
-  space: {},
-  fonts: {}
 });

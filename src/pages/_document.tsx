@@ -54,6 +54,10 @@ export default class Document extends NextDocument {
             name="twitter:image"
             content="https://i.pinimg.com/originals/64/42/0b/64420b6687531dcde9499f0332b1c7a2.jpg"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;700&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
