@@ -40,6 +40,10 @@ const Navigation = styled('div', {
     fontWeight: 600,
     fontSize: '1.1rem',
     padding: '1rem'
+  },
+
+  '@bp1': {
+    display: 'none'
   }
 });
 

@@ -1,6 +1,7 @@
 import {Header} from '../components/Header';
 import Head from 'next/head';
 import {homeStyles} from '../styles/HomeCss';
+import {About} from '../components/About';
 
 export default function Home() {
   homeStyles();
@@ -10,6 +11,7 @@ export default function Home() {
         <title>Jhonatas Paulo | Desenvolvedor Web </title>
       </Head>
       <Header />
+      <About />
     </>
   );
 }
