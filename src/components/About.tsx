@@ -7,9 +7,9 @@ import {Download} from './Shared/Icons';
 import {Button} from './Shared/Button';
 import {useColor} from '../hooks/useColor';
 
-export const Wrapper = styled('div', {});
+const Wrapper = styled('div', {});
 
-export const HeaderSection = styled('div', {
+const HeaderSection = styled('div', {
   '& h1': {
     fontSize: '6rem'
   },
@@ -19,11 +19,11 @@ export const HeaderSection = styled('div', {
   }
 });
 
-export const Content = styled('div', {
+const Content = styled('div', {
   display: 'grid',
   gap: '4rem',
   gridTemplateColumns: '30rem 1fr',
-  marginTop: '4rem',
+  marginTop: '10rem',
 
   '@bp2': {
     gridTemplateColumns: '20rem 1fr'
@@ -36,7 +36,7 @@ export const Content = styled('div', {
   }
 });
 
-export const BoxImage = styled('div', {
+const BoxImage = styled('div', {
   width: '80%',
   aspectRatio: '1/1',
   borderRadius: '50%',
@@ -48,12 +48,14 @@ export const BoxImage = styled('div', {
   }
 });
 
-export const Text = styled('div', {
+const Text = styled('div', {
   '& p': {
     fontSize: '2.5rem',
     fontWeight: 200,
     lineHeight: '4rem',
-    marginBottom: '2.5rem'
+    marginBottom: '2.5rem',
+    marginTop: '2.5rem',
+    color: '$text500'
   }
 });
 
@@ -62,7 +64,7 @@ export function About() {
 
   return (
     <Wrapper id="about">
-      <Section pt={4} ptm={5}>
+      <Section pt={10} ptm={10}>
         <HeaderSection
           css={{
             '& h1': {
@@ -83,17 +85,18 @@ export function About() {
           </BoxImage>
           <Text>
             <p>
-              Olá, meu nome é Jhonatas Paulo, Tenho 26 anos, e sou amante do
-              design e apaixonado por tecnologia. Trabalho com desenvolvimento
-              web há mais de 4 anos, e há 2 anos como UI Designer, desenvolvendo
-              apps mobile e desktop. Sou adepto da ideologia do clean design,
-              clean code, boas práticas e todos os dias com trabalhos melhores
-              que outros, espero que possamos nos conhecer melhor, bater um papo
-              legal, e quem sabe não fazemos um site incrível pra você.
+              Olá, meu nome é <strong>Jhonatas Paulo</strong>, Tenho 26 anos, e
+              sou amante do design e apaixonado por tecnologia. Trabalho com
+              desenvolvimento web há mais de 4 anos, e há 2 anos como UI
+              Designer, desenvolvendo apps mobile e desktop. Sou adepto da
+              ideologia do clean design, clean code, boas práticas e todos os
+              dias com trabalhos melhores que outros, espero que possamos nos
+              conhecer melhor, bater um papo legal, e quem sabe não fazemos um
+              site incrível pra você.
             </p>
-            <Button color={colorTheme.color}>
+            <Button color={colorTheme.color} variant="secondary">
               <span>Download CV</span>
-              <Download />
+              <Download variant="secondary" color={colorTheme.color} />
             </Button>
           </Text>
         </Content>

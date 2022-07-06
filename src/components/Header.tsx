@@ -71,7 +71,7 @@ const Colors = styled('div', {
   }
 });
 
-export const InfoProfile = styled('div', {
+const InfoProfile = styled('div', {
   marginTop: '-6rem',
 
   '& h1': {
@@ -93,7 +93,7 @@ export const InfoProfile = styled('div', {
   }
 });
 
-export const SocialLinks = styled('div', {
+const SocialLinks = styled('div', {
   display: 'flex',
   gap: '1.5rem',
   marginTop: '3rem',

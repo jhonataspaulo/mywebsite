@@ -13,10 +13,14 @@ export const {
   theme: {
     colors: {
       text: '#f2f2f2',
+      text500: '#A5A4A4',
       background: '#0C0C0C',
-      primary: '#56FF9A',
-      orange: '#F6B100',
-      blue: '#00AAE0'
+      primary: 'rgba(86, 255, 154, 1)',
+      primaryOpacity: 'rgba(86, 255, 154, .1)',
+      orange: 'rgba(246, 177, 0, 1)',
+      orangeOpacity: 'rgba(246, 177, 0, .1)',
+      blue: 'rgba(0, 170, 224, 1)',
+      blueOpacity: 'rgba(0, 170, 224, .1)'
     }
   },
   media: {

@@ -2,6 +2,7 @@ import {Header} from '../components/Header';
 import Head from 'next/head';
 import {homeStyles} from '../styles/HomeCss';
 import {About} from '../components/About';
+import {Skills} from '../components/Skills';
 
 export default function Home() {
   homeStyles();
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <Header />
       <About />
+      <Skills />
     </>
   );
 }
