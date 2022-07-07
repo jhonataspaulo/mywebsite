@@ -31,6 +31,7 @@ export function ColorProvider({children}: ColorProviderProps) {
       setColorTheme({color: 'primary'});
     } else {
       const theme = JSON.parse(themeLocalStorage) as Color;
+      console.log(theme);
       setColorTheme(theme);
     }
   }

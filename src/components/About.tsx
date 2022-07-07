@@ -84,7 +84,7 @@ const Text = styled('div', {
 });
 
 export function About() {
-  const {colorTheme, setColor} = useColor();
+  const {colorTheme} = useColor();
 
   return (
     <Wrapper id="about">
@@ -118,10 +118,12 @@ export function About() {
               conhecer melhor, bater um papo legal, e quem sabe não fazemos um
               site incrível pra você.
             </p>
-            <Button color={colorTheme.color} variant="secondary">
-              <span>Download CV</span>
-              <Download variant="secondary" color={colorTheme.color} />
-            </Button>
+            <a href="curriculum.pdf" download="curriculo">
+              <Button color={colorTheme.color} variant="secondary">
+                <span>Download CV</span>
+                <Download variant="secondary" color={colorTheme.color} />
+              </Button>
+            </a>
           </Text>
         </Content>
       </Section>

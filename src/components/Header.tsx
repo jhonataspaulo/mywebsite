@@ -127,6 +127,8 @@ const BoxIcon = styled('div', {
 
 const MenuMobile = styled('div', {
   display: 'none',
+  position: 'fixed',
+  zIndex: 10,
 
   '@bp2': {
     display: 'flex',
@@ -136,7 +138,6 @@ const MenuMobile = styled('div', {
     justifyContent: 'center',
     cursor: 'pointer',
 
-    position: 'fixed',
     left: 0,
     top: 0,
     bottom: 0,
@@ -168,7 +169,9 @@ export function Header() {
     setIsActive(false);
   };
 
-  function toggleMenu() {}
+  function navigateTo(url: string) {
+    window.open(url, '_blank');
+  }
 
   return (
     <Wrapper id="home">
@@ -208,46 +211,50 @@ export function Header() {
               config={{
                 scale: true,
                 hover: colorTheme.color,
-                cpointer: true
+                cpointer: true,
+                onclick: () => navigateTo('https://github.com/jhonataspaulo')
               }}
             />
             <Facebook
               config={{
                 scale: true,
                 hover: colorTheme.color,
-                cpointer: true
+                cpointer: true,
+                onclick: () =>
+                  navigateTo('https://www.facebook.com/jhonataspaullo/')
               }}
             />
             <Twitter
               config={{
                 scale: true,
                 hover: colorTheme.color,
-                cpointer: true
+                cpointer: true,
+                onclick: () => navigateTo('https://twitter.com/JhonatasPaulo')
               }}
             />
             <LinkedIn
               config={{
                 scale: true,
                 hover: colorTheme.color,
-                cpointer: true
+                cpointer: true,
+                onclick: () =>
+                  navigateTo('https://www.linkedin.com/in/jhonataspaulo/')
               }}
             />
             <Instagram
               config={{
                 scale: true,
                 hover: colorTheme.color,
-                cpointer: true
+                cpointer: true,
+                onclick: () =>
+                  navigateTo('https://www.instagram.com/jhonataspaullo/')
               }}
             />
           </SocialLinks>
         </div>
       </Section>
-      <BoxIcon onClick={() => toggleMenu()}>
-        <MenuOpen
-          config={{
-            onclick: () => setIsActive(true)
-          }}
-        />
+      <BoxIcon onClick={() => setIsActive(true)}>
+        <MenuOpen config={{}} />
       </BoxIcon>
       {isActive && (
         <MenuMobile

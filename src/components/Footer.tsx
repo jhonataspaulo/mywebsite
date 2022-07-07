@@ -109,6 +109,10 @@ export function Footer() {
     });
   };
 
+  function navigateTo(url: string) {
+    window.open(url, '_blank');
+  }
+
   return (
     <Wrapper id="contact">
       <Section pt={10} ptm={10} className="section reveal" pb={6}>
@@ -142,7 +146,8 @@ export function Footer() {
                 scale: true,
                 hover: colorTheme.color,
                 cpointer: true,
-                size: 30
+                size: 30,
+                onclick: () => navigateTo('https://github.com/jhonataspaulo')
               }}
             />
             <Facebook
@@ -150,7 +155,9 @@ export function Footer() {
                 scale: true,
                 hover: colorTheme.color,
                 cpointer: true,
-                size: 30
+                size: 30,
+                onclick: () =>
+                  navigateTo('https://www.facebook.com/jhonataspaullo/')
               }}
             />
             <Twitter
@@ -158,7 +165,8 @@ export function Footer() {
                 scale: true,
                 hover: colorTheme.color,
                 cpointer: true,
-                size: 30
+                size: 30,
+                onclick: () => navigateTo('https://twitter.com/JhonatasPaulo')
               }}
             />
             <LinkedIn
@@ -166,7 +174,9 @@ export function Footer() {
                 scale: true,
                 hover: colorTheme.color,
                 cpointer: true,
-                size: 30
+                size: 30,
+                onclick: () =>
+                  navigateTo('https://www.linkedin.com/in/jhonataspaulo/')
               }}
             />
             <Instagram
@@ -174,11 +184,19 @@ export function Footer() {
                 scale: true,
                 hover: colorTheme.color,
                 cpointer: true,
-                size: 30
+                size: 30,
+                onclick: () =>
+                  navigateTo('https://www.instagram.com/jhonataspaullo/')
               }}
             />
           </SocialLinks>
-          <Button color={colorTheme.color} variant="primary">
+          <Button
+            color={colorTheme.color}
+            variant="primary"
+            onClick={() =>
+              navigateTo('https://api.whatsapp.com/send?phone=5599985067422')
+            }
+          >
             <WhatsApp variant="primary" size={25} />
             WhatsApp
           </Button>

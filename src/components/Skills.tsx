@@ -34,18 +34,25 @@ const Content = styled('div', {
   gap: '4rem',
   justifyContent: 'center',
 
+  '@bp2': {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    alignItems: 'stretch'
+  },
+
   '@bp1': {
+    display: 'flex',
     flexDirection: 'column',
     alignItems: 'center'
   }
 });
 
 export function Skills() {
-  const {colorTheme, setColor} = useColor();
+  const {colorTheme} = useColor();
 
   return (
     <Wrapper id="skills">
-      <Section pt={15} ptm={15} className="reveal">
+      <Section pt={10} ptm={10} className="reveal">
         <HeaderSection
           css={{
             '& h1': {
