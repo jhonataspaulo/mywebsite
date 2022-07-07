@@ -48,7 +48,8 @@ const Navigation = styled('div', {
     fontWeight: 600,
     fontSize: '1.1rem',
     padding: '1rem',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    letterSpacing: '.3rem'
   },
 
   '@bp1': {
