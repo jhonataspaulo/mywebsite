@@ -52,7 +52,7 @@ const Navigation = styled('div', {
     letterSpacing: '.3rem'
   },
 
-  '@bp1': {
+  '@bp2': {
     display: 'none'
   }
 });
@@ -116,23 +116,25 @@ const SocialLinks = styled('div', {
 const BoxIcon = styled('div', {
   display: 'none',
 
-  '@bp1': {
+  '@bp2': {
     display: 'block',
     position: 'absolute',
     top: '3rem',
-    right: '3rem'
+    right: '3rem',
+    cursor: 'pointer'
   }
 });
 
 const MenuMobile = styled('div', {
   display: 'none',
 
-  '@bp1': {
+  '@bp2': {
     display: 'flex',
     flexDirection: 'column',
     gap: '2rem',
     alignItems: 'center',
     justifyContent: 'center',
+    cursor: 'pointer',
 
     position: 'fixed',
     left: 0,
@@ -154,7 +156,7 @@ const MenuMobile = styled('div', {
 });
 
 export function Header() {
-  const {colorTheme, setColor} = useColor();
+  const {colorTheme, setTheme} = useColor();
   const [isActive, setIsActive] = useState(false);
 
   const goTo = (elem: any) => {
@@ -184,9 +186,9 @@ export function Header() {
           <a onClick={() => goTo('#contact')}>CONTATO</a>
         </Navigation>
         <Colors>
-          <div className="color" onClick={() => setColor({color: 'primary'})} />
-          <div className="color" onClick={() => setColor({color: 'orange'})} />
-          <div className="color" onClick={() => setColor({color: 'blue'})} />
+          <div className="color" onClick={() => setTheme({color: 'primary'})} />
+          <div className="color" onClick={() => setTheme({color: 'orange'})} />
+          <div className="color" onClick={() => setTheme({color: 'blue'})} />
         </Colors>
         <div className="bio">
           <InfoProfile
@@ -248,7 +250,14 @@ export function Header() {
         />
       </BoxIcon>
       {isActive && (
-        <MenuMobile onClick={() => setIsActive(false)}>
+        <MenuMobile
+          onClick={() => setIsActive(false)}
+          css={{
+            '& a:nth-child(-n+4):hover': {
+              color: `$${colorTheme.color}`
+            }
+          }}
+        >
           <a onClick={() => goTo('#home')}>HOME</a>
           <a onClick={() => goTo('#about')}>SOBRE MIM</a>
           <a onClick={() => goTo('#skills')}>HABILIDADES</a>

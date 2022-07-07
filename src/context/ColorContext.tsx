@@ -1,8 +1,9 @@
 import {createContext, useEffect, useState} from 'react';
+import {json} from 'stream/consumers';
 
 type ColorContextType = {
   colorTheme: Color;
-  setColor: (color: Color) => void;
+  setTheme: (color: Color) => void;
 };
 
 export const ColorContext = createContext({} as ColorContextType);
@@ -18,15 +19,31 @@ export type Color = {
 export function ColorProvider({children}: ColorProviderProps) {
   const [colorTheme, setColorTheme] = useState<Color>({color: 'primary'});
 
-  function setColor(color: Color) {
-    setColorTheme(color);
+  async function setTheme(theme: Color) {
+    const themeTmp = JSON.stringify(theme);
+    localStorage.setItem('theme', themeTmp);
+    await updateTheme();
   }
+
+  async function updateTheme() {
+    let themeLocalStorage = await localStorage.getItem('theme');
+    if (!themeLocalStorage) {
+      setColorTheme({color: 'primary'});
+    } else {
+      const theme = JSON.parse(themeLocalStorage) as Color;
+      setColorTheme(theme);
+    }
+  }
+
+  useEffect(() => {
+    updateTheme();
+  }, []);
 
   return (
     <ColorContext.Provider
       value={{
         colorTheme,
-        setColor
+        setTheme
       }}
     >
       {children}
