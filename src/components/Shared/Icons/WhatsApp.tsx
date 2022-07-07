@@ -9,6 +9,7 @@ type WhatsAppProps = {
   color?: TOKEN_COLORS;
   onclick?: () => void;
   cpointer?: boolean;
+  variant: string;
 };
 
 const Container = styled('div', {});
@@ -17,12 +18,13 @@ export const WhatsApp = ({
   size = 32,
   color = TOKEN_COLORS.primary,
   onclick,
-  cpointer = false
+  cpointer = false,
+  variant = 'primary'
 }: WhatsAppProps) => (
   <Container
     css={{
       '& svg path': {
-        fill: `$${color}`
+        fill: variant === 'primary' ? '$background' : `$${color}`
       },
       '& svg': {
         width: size * 1.3,

@@ -2,7 +2,15 @@ import {styled} from '../stitches.config';
 import {Section} from './Shared/Section';
 import {useColor} from '../hooks/useColor';
 import backgroundImage from '../assets/background.png';
-import {Facebook, Github, Instagram, LinkedIn, Twitter} from './Shared/Icons';
+import {
+  Facebook,
+  Github,
+  Instagram,
+  LinkedIn,
+  MenuOpen,
+  Twitter
+} from './Shared/Icons';
+import {useState} from 'react';
 
 const Wrapper = styled('div', {
   background: `url(${backgroundImage.src})`,
@@ -39,7 +47,8 @@ const Navigation = styled('div', {
     transform: 'rotate(-90deg)',
     fontWeight: 600,
     fontSize: '1.1rem',
-    padding: '1rem'
+    padding: '1rem',
+    cursor: 'pointer'
   },
 
   '@bp1': {
@@ -103,8 +112,60 @@ const SocialLinks = styled('div', {
   }
 });
 
+const BoxIcon = styled('div', {
+  display: 'none',
+
+  '@bp1': {
+    display: 'block',
+    position: 'absolute',
+    top: '3rem',
+    right: '3rem'
+  }
+});
+
+const MenuMobile = styled('div', {
+  display: 'none',
+
+  '@bp1': {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '2rem',
+    alignItems: 'center',
+    justifyContent: 'center',
+
+    position: 'fixed',
+    left: 0,
+    top: 0,
+    bottom: 0,
+    right: 0,
+    backgroundColor: 'rgba(0,0,0,0.9)',
+
+    '& a': {
+      padding: '1rem',
+      fontSize: '2rem',
+      fontWeight: 600
+    },
+
+    '& a:last-child': {
+      color: 'tomato'
+    }
+  }
+});
+
 export function Header() {
   const {colorTheme, setColor} = useColor();
+  const [isActive, setIsActive] = useState(false);
+
+  const goTo = (elem: any) => {
+    window.scroll({
+      top: document.querySelector(elem).offsetTop,
+      left: 0,
+      behavior: 'smooth'
+    });
+    setIsActive(false);
+  };
+
+  function toggleMenu() {}
 
   return (
     <Wrapper id="home">
@@ -116,11 +177,10 @@ export function Header() {
             }
           }}
         >
-          <a href="">HOME</a>
-          <a href="">SOBRE MIM</a>
-          <a href="">HABILIDADES</a>
-          <a href="">TRABALHOS</a>
-          <a href="">CONTATO</a>
+          <a onClick={() => goTo('#home')}>HOME</a>
+          <a onClick={() => goTo('#about')}>SOBRE MIM</a>
+          <a onClick={() => goTo('#skills')}>HABILIDADES</a>
+          <a onClick={() => goTo('#contact')}>CONTATO</a>
         </Navigation>
         <Colors>
           <div className="color" onClick={() => setColor({color: 'primary'})} />
@@ -179,6 +239,22 @@ export function Header() {
           </SocialLinks>
         </div>
       </Section>
+      <BoxIcon onClick={() => toggleMenu()}>
+        <MenuOpen
+          config={{
+            onclick: () => setIsActive(true)
+          }}
+        />
+      </BoxIcon>
+      {isActive && (
+        <MenuMobile onClick={() => setIsActive(false)}>
+          <a onClick={() => goTo('#home')}>HOME</a>
+          <a onClick={() => goTo('#about')}>SOBRE MIM</a>
+          <a onClick={() => goTo('#skills')}>HABILIDADES</a>
+          <a onClick={() => goTo('#contact')}>CONTATO</a>
+          <a onClick={() => setIsActive(false)}>FECHAR</a>
+        </MenuMobile>
+      )}
     </Wrapper>
   );
 }

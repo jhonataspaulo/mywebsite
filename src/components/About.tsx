@@ -7,7 +7,19 @@ import {Download} from './Shared/Icons';
 import {Button} from './Shared/Button';
 import {useColor} from '../hooks/useColor';
 
-const Wrapper = styled('div', {});
+const Wrapper = styled('div', {
+  '& .reveal': {
+    position: 'relative',
+    transform: 'translateY(150px)',
+    opacity: 0,
+    transition: '1s all ease',
+
+    '&.active': {
+      transform: 'translateY(0)',
+      opacity: 1
+    }
+  }
+});
 
 const HeaderSection = styled('div', {
   '& h1': {
@@ -24,6 +36,18 @@ const Content = styled('div', {
   gap: '4rem',
   gridTemplateColumns: '30rem 1fr',
   marginTop: '10rem',
+
+  '& .reveal': {
+    position: 'relative',
+    transform: 'translateY(150px)',
+    opacity: 0,
+    transition: '1s all ease',
+
+    '&.active': {
+      transform: 'translateY(0)',
+      opacity: 1
+    }
+  },
 
   '@bp2': {
     gridTemplateColumns: '20rem 1fr'
@@ -64,7 +88,7 @@ export function About() {
 
   return (
     <Wrapper id="about">
-      <Section pt={10} ptm={10}>
+      <Section pt={10} ptm={4} className="reveal">
         <HeaderSection
           css={{
             '& h1': {

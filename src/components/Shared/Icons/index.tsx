@@ -5,5 +5,15 @@ import {LinkedIn} from './LinkedIn';
 import {Twitter} from './Twitter';
 import {WhatsApp} from './WhatsApp';
 import {Download} from './Download';
+import {MenuOpen} from './MenuOpen';
 
-export {Facebook, Github, Instagram, LinkedIn, Twitter, WhatsApp, Download};
+export {
+  Facebook,
+  Github,
+  Instagram,
+  LinkedIn,
+  Twitter,
+  WhatsApp,
+  Download,
+  MenuOpen
+};

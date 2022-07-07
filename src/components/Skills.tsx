@@ -4,7 +4,19 @@ import {Section} from './Shared/Section';
 import {SkillDetail} from './Shared/SkillDetail';
 import {SkillGroup} from './Shared/SkillGroup';
 
-const Wrapper = styled('div', {});
+const Wrapper = styled('div', {
+  '& .reveal': {
+    position: 'relative',
+    transform: 'translateY(150px)',
+    opacity: 0,
+    transition: '1s all ease',
+
+    '&.active': {
+      transform: 'translateY(0)',
+      opacity: 1
+    }
+  }
+});
 
 const HeaderSection = styled('div', {
   '& h1': {
@@ -33,7 +45,7 @@ export function Skills() {
 
   return (
     <Wrapper id="skills">
-      <Section pt={15} ptm={15}>
+      <Section pt={15} ptm={15} className="reveal">
         <HeaderSection
           css={{
             '& h1': {

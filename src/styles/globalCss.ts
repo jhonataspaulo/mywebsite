@@ -7,7 +7,8 @@ export const globalStyles = globalCss({
     overflowX: 'hidden',
     color: '$text',
     backgroundColor: '$background',
-    fontWeight: 400
+    fontWeight: 400,
+    position: 'relative'
   },
   html: {
     fontSize: '62.5%',
