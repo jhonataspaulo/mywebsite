@@ -47,22 +47,27 @@ export function Skills() {
         <Content>
           <SkillGroup title="Frontend" description="">
             <SkillDetail title="HTML" percent={90} />
-            <SkillDetail title="CSS" percent={85} />
-            <SkillDetail title="JavaScript" percent={70} />
+            <SkillDetail title="CSS" percent={90} />
+            <SkillDetail title="Sass" percent={80} />
+            <SkillDetail title="JavaScript" percent={80} />
             <SkillDetail title="React Js" percent={80} />
           </SkillGroup>
 
           <SkillGroup title="Backend" description="">
-            <SkillDetail title="React Native" percent={85} />
-            <SkillDetail title="Google Play Store" percent={85} />
-            <SkillDetail title="Apple Store" percent={70} />
+            <SkillDetail title="Git" percent={80} />
+            <SkillDetail title="REST API" percent={70} />
+            <SkillDetail title="GraphQL" percent={80} />
+            <SkillDetail title="NodeJs" percent={80} />
+            <SkillDetail title="MongoDB" percent={70} />
+            <SkillDetail title="MySQL" percent={70} />
+            <SkillDetail title="TypeScript" percent={80} />
           </SkillGroup>
 
-          <SkillGroup title="UI Design" description="">
-            <SkillDetail title="C#" percent={60} />
-            <SkillDetail title="NodeJs" percent={85} />
-            <SkillDetail title="MySQL" percent={80} />
-            <SkillDetail title="Python" percent={70} />
+          <SkillGroup title="UI Design / Design Gráfico" description="">
+            <SkillDetail title="Figma" percent={80} />
+            <SkillDetail title="Photoshop" percent={65} />
+            <SkillDetail title="Illustrator" percent={65} />
+            <SkillDetail title="CorelDraw" percent={75} />
           </SkillGroup>
         </Content>
       </Section>
