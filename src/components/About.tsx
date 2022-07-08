@@ -118,7 +118,10 @@ export function About() {
               conhecer melhor, bater um papo legal, e quem sabe não fazemos um
               site incrível pra você.
             </p>
-            <a href="curriculum.pdf" download="curriculo">
+            <a
+              href="curriculum.pdf"
+              download="Curriculum de Jhonatas Paulo (Desenvolvedor Web Fullstack)"
+            >
               <Button color={colorTheme.color} variant="secondary">
                 <span>Download CV</span>
                 <Download variant="secondary" color={colorTheme.color} />
